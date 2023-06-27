@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <img src="img/jarditou_logo.jpg" width="300" height="100"><p>La qualité depuis 70 ans</p> 
+</head>
+<body>
+    <img src="img/jarditou_logo.jpg" width="300" height="100" alt="logo"><p>La qualité depuis 70 ans</p> 
     <ul>
         <li><a href="index.html">Accueil</a></li>
         <li><a href="tableau.html">Tableau</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-</head>
-<body>
     <h1>Contact</h1><hr>
     <form action="http://bienvu.net/script.php" method="post">
         <fieldset>
@@ -21,8 +21,8 @@
             <label for="nom">Votre Nom* :</label><input type="text" name="nom" id="nom" required> <br>
             <label for="prenom">Votre Prénom* :</label><input type="text" name="prenom" id="prenom" required> <br> <br>
             <label for="sexe">Sexe* :</label>
-                <input type="radio" name="sexe" id="sexe" value="Féminin" required> Féminin
-                <input type="radio" name="sexe" id="sexe" value="Masculin" required> Masculin <br> <br>
+                <input type="radio" id="sexe" name="sexe" value="Féminin" required> Féminin
+                <input type="radio" id="sexe" name="sexe" value="Masculin" required> Masculin <br> <br>
             <label for="date">Date de naissance* :</label>
                 <input type="date" name="ddn" id="date" required> <br>
             <label for="codepostal">Code postal* :</label>
@@ -47,7 +47,7 @@
 
             </select> <br>
         <label for="question">Votre question* :</label>
-            <textarea name="question" required></textarea>
+            <textarea id="question" required></textarea>
         </fieldset>
 
         <input type="checkbox" name="accepter" value="accepter" required>* J'accepte le traitement informatique de ce formulaire <br>
