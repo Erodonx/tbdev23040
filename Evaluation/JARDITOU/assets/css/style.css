@@ -1,9 +1,16 @@
+html{
+    font-size:100%;
+}
 .black{
     background-color: #000;
     width : auto;
-    height : 60px;
-    line-height: 50px;
-    text-indent: 30px;
+    border:1rem solid;
+    text-indent: 1rem;
+    display:block;
+    font-size: 1rem;
+}
+.droite{
+
 }
 .width{
     width:100%;
@@ -12,19 +19,20 @@
 .parent{
     border: 0px white solid;
     display:inline-block;
+    height:11rem;
 
 }
 .box{
     display: inline-block;
-    width:800px;
-    height:500px;
-
+    width:10rem;
+    height:10rem;
+}
+#one{
+    width:70%;
 }
 #two{
-    position:absolute;
     background:#808080;
-    height: 62%;
-
+    width:30%;
 }
 a{
     color:#FFF;
