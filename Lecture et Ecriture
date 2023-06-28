@@ -6,9 +6,10 @@ Exercice 2.2
 
 Variable val en Numérique
 Début
+Ecrire "Saisissez un nombre"
 Lire val
 val ← val^2
-ecrire val
+Ecrire "Le carré de votre nombre vaut " + val
 Fin
 
 Exercice 2.3:

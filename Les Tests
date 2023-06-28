@@ -19,15 +19,14 @@ Ecrire "Saisissez le premier nombre"
 Lire a
 Ecrire "Saisissez le deuxième nombre"
 Lire b
-Si a ET b > 0 OU a ET b < 0
+Si a ET b > 0 OU a ET b < 0 Alors
 	Ecrire "Le produit des deux nombres est positif"
 Finsi
-Si a > 0 ET b < 0 OU a < 0 ET b > 0
+Si a > 0 ET b < 0 OU a < 0 ET b > 0 Alors
 	Ecrire " le produit des deux nombres est négatif"
 Finsi
 fin
 
-revenir ici plus tard
 Exercice 3.3:
 
 Variables a,b,c en Caractères
@@ -44,13 +43,13 @@ Exercice 3.4:
 Variables nombre en Numérique
 Ecrire "Saisissez votre nombre"
 lire nombre
-Si nombre > 0
+Si nombre > 0 Alors 
 	Ecrire "C'est un nombre positif"
 Finsi
-Si nombre = 0
+Si nombre = 0 Alors
 	Ecrire "C'est un nombre nul"
 Finsi
-Si nombre < 0
+Si nombre < 0 Alors
 	Ecrire "C'est un nombre négatif"
 Finsi
 Fin
@@ -61,11 +60,11 @@ Variables a,b en Numériques
 Ecrire "Saisissez votre 1er nombre"
 Lire a
 Ecrire "Saisissez votre 2ème nombre"
-Si a < 0 ET b < 0 OU a > 0 ET B > 0
+Si a < 0 ET b < 0 OU a > 0 ET B > 0 Alors
 	Ecrire "le produit des deux nombres est positif"
 Sinon
 
-	Si a > 0 ET b < 0 OU a < 0 ET b > 0
+	Si a > 0 ET b < 0 OU a < 0 ET b > 0 Alors
 		Ecrire " le produit des deux nombres est négatif"
    	Sinon 
 		Ecrire "Le produit des deux nombres est nul"
@@ -79,16 +78,16 @@ Variable age en Entier
 Début
 Ecrire "Quel est vôtre age"
 lire age
-Si age >= 6 ET <=7
+Si age >= 6 ET <=7 Alors
 	Ecrire "Vous êtes un poussin"
 Finsi
-Si age >=8 ET <= 9
+Si age >=8 ET <= 9 Alors
 	Ecrire "Vous êtes une Pupille"
 Finsi
-Si age >=10 ET <= 11
+Si age >=10 ET <= 11 Alors
 	Ecrire "Vous êtes un Minime"
 Finsi
-Si age >12
+Si age >12 Alors 
 	Ecrire "Vous êtes un cadet"
 Finsi
 Fin
