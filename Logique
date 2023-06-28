@@ -1,0 +1,64 @@
+Exercice 4.1:
+Oui en utilisant la proposition contraire
+Si non (inverse condition initiale) ET non inverse(condition initiale)
+Si tutu < Toto + 4 ET Tata !="OK" Alors
+ Tutu ← Tutu -1
+Sinon
+Tutu ← Tutu +1
+Finsi
+
+Exercice 4.2
+
+variable heures, minutes En entier
+Début
+Ecrire "Saisissez l'heure"
+lire heures
+Ecrire "Saisissez les minutes"
+lire minutes
+minutes ← minutes +1 
+Si minutes < 60 
+	Ecrire "Dans une minute, il sera " + heures +"heure(s)" + minutes
+	Sinon 
+	heures ← heures+1
+	minutes ← 0
+		Si heures < 24
+			Ecrire "Dans une minute, il sera " + heures +"heure(s)" + minutes
+		sinon
+			heures ← 0
+			Ecrire "Dans une minute, il sera " + heures +"heure(s)" + minutes
+		finsi
+Finsi
+Fin
+
+Exercice 4.3:
+
+variable heures, minutes,secondes En entier
+Début
+Ecrire "Saisissez l'heure"
+lire heures
+Ecrire "Saisissez les minutes"
+lire minutes
+Ecrire "Saisissez les secondes"
+lire secondes
+secondes ← secondes +1 
+Si seconde < 60
+	Ecrire "Dans une seconde, il sera " + heures +"heure(s)" + minutes +" minute(s) et " + secondes + " seconde(s)"
+Sinon 
+	minutes ← minutes+1
+	secondes ← 0
+		Si minutes < 60 
+			Ecrire "Dans une seconde, il sera " + heures +"heure(s)" + minutes +" minute(s) et " + secondes + " seconde(s)"
+		Sinon 
+			heures ← heures+1
+			minutes ← 0
+			Si heures < 24
+				Ecrire "Dans une seconde, il sera " + heures +"heure(s)" + minutes +" minute(s) et " + secondes + " seconde(s)"
+			sinon
+				heures ← 0
+				Ecrire "Dans une seconde, il sera " + heures +"heure(s)" + minutes +" minute(s) et " + secondes + " seconde(s)"
+			finsi
+			
+		Finsi
+Finsi
+Fin
+

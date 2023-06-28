@@ -9,13 +9,25 @@ ul li {
 html{
     font-size:100%;
 }
-footer, header {
+footer {
     background-color: black;
     width : auto;
     text-indent: 0.1em;
     display: flex;
 
 }
+#parent1 {
+    position:relative;
+}
+#parent2 {
+  position:relative;
+  bottom:0;
+  background-color: black;
+  width : auto;
+  text-indent: 0.1em;
+  display: flex;
+}
+
 /* #lign{ 
     border-color:#A9A9A9;
     background-color: #A9A9A9;
@@ -45,6 +57,7 @@ footer, header {
     display:flex;
     /* position:relative; */
     height:100%;
+    width:100%;
 }
 .box{
     position:relative;
@@ -63,7 +76,8 @@ footer, header {
     height:auto;
 }
 .box3{
-    text-align:right;
+    text-align:center;
+    margin:auto;
 }
 a{
     color:#FFF;

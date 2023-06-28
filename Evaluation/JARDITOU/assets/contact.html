@@ -8,6 +8,15 @@
 </head>
 <body>
     <header>
+        <div class="parent" id="parent1">
+            <div class="box">
+            <img src="img/jarditou_logo.jpg" height="100" alt="logo">
+            </div>
+            <div class="box3">
+            <p class="headtext">Tout le jardin</p>
+            </div>
+        </div>
+        <div class="parent" id="parent2">
         <div class="nav">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -15,18 +24,9 @@
                 <li><a href="contact.html">Formulaire</a></li>
             </ul>
         </div>
+        </div>
     </header>
-    <div class="parent">
-        <div class="box1">
-        <img src="img/jarditou_logo.jpg" width="auto" height="100" alt="logo">
-        </div>
-        <div class="box3">
-        <p class="headtext">Tout le jardin</p>
-        </div>
-        </div>
     <h1>Contact</h1><hr>
-    <div class="parent">
-        <div class="box1">
     <form action="http://bienvu.net/script.php" method="post">
         <fieldset>
             <p>*Ces zones sont obligatoires</p>
@@ -34,9 +34,17 @@
             <legend>Vos coordonnées</legend>
             <label for="nom">Votre Nom* :</label><input type="text" name="nom" id="nom" required> <br>
             <label for="prenom">Votre Prénom* :</label><input type="text" name="prenom" id="prenom" required> <br> <br>
+            
+            
+            
+            <!-- radio -->
             <label for="sexe">Sexe* :</label>
-                <input type="radio" id="sexe1" name="sexe" value="Féminin" required> Féminin
-                <input type="radio" id="sexe2" name="sexe" value="Masculin" required> Masculin <br> <br>
+            <label for="feminin">Féminin</label>
+            <input type="radio"  id="Feminin" name="sexe" value="Feminin" required>
+            <label for="masculin">Masculin</label>
+            <input type="radio" id="masculin" name="sexe" value="Masculin" required>
+            <br> <br>
+            
             <label for="date">Date de naissance* :</label>
                 <input type="date" name="ddn" id="date" required> <br>
             <label for="codepostal">Code postal* :</label>
@@ -46,7 +54,7 @@
             <label for="ville">Ville :</label>
                 <input type="text" id="ville"> <br>
             <label for="email">Email* :</label>
-                <input type="text" id="email" placeholder="dave.loper@afpa.fr" required> <br>  
+                <input type="email" id="email" placeholder="dave.loper@afpa.fr" required> <br>  
         </fieldset>
         
         <fieldset>
@@ -70,11 +78,6 @@
     </fieldset>
 
     </form>
-    </div>
-    <div class="box2">
-        <p>[ COLONNE DROITE ]</p>
-    </div>
-    </div>
     <footer>
         <div class="nav">
             <ul>
@@ -83,5 +86,6 @@
                 <li><a href="index.html">Plan du site</a></li>
             </ul>
         </div>
-</body>
+    </footer>
+    </body>
 </html>
