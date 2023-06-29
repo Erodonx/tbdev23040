@@ -1,11 +1,9 @@
-var nombre=window.prompt('Saisir le nombre');
-while(isNaN(nombre)==true){
+var nombre=window.prompt("Saisir l'année de naissance");
+var date = new Date();
+var annee = date.getFullYear();
+while(isNaN(nombre)||(nombre<=1900)||(nombre>=annee)) {
     nombre=window.prompt('Saisie incorrecte veuillez recommencer');
     nombre=+nombre;
 }
-if (nombre%2==0){
-    window.alert("le nombre "+nombre+ " est pair");
-}
-else{
-    window.alert("le nombre "+nombre+" est impair");
-}
+var age=annee-nombre;
+window.alert("Vous avez "+age +" ans");
