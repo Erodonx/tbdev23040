@@ -1,0 +1,142 @@
+Exercice 5.1 :
+
+Variable nombre en Entier
+Début
+nombre ← 0
+Ecrire "Saisissez un nombre entier entre 1 et 3"
+	Tant que nombre <1 OU nombre >3
+		Lire nombre
+	FinTantQue
+Ecrire "Bravo vous avez saisi un nombre entre 1 et 3 !"
+Fin
+
+Exercice 5.2 :
+
+Variable nombre en Entier
+Début
+nombre ← 0
+Écrire "Saisissez un nombre entre 10 et 20"
+	Tant que nombre <10 OU nombre >20
+		Lire nombre
+		Si nombre < 10 Alors
+		Ecrire "Plus grand"
+		Sinon
+		     Si nombre > 10 ET nombre > 20 Alors
+		     	Ecrire "Plus petit"
+		     Finsi
+		Finsi
+	Fintantque
+Ecrire "Bravo vous avez saisi un nombre entre 10 et 20"
+Fin
+
+Exercice 5.3 :
+
+Variable nombre, i en Entier
+Début
+i ← 1
+Ecrire "Saisissez un nombre entier"
+lire nombre
+Tant que i < 10
+	nombre ← nombre +1
+	i ← i +1
+	Ecrire nombre + " "
+Fintantque
+fin
+
+Exercice 5.4:
+
+Variable multiple,nombre, i en Entier
+Début
+i ← 1
+Ecrire "Saisissez un nombre entier"
+lire nombre
+Tant que i < 10
+	multiple ← nombre*i
+	Ecrire nombre + " x " + i + " = " multiple 
+	i ← i +1
+Fintantque
+fin
+
+Exercice 5.5 :
+
+Variables addition,nombre, i en Entiers
+Début
+i ← 0
+Ecrire "Saisissez un nombre entier"
+lire nombre
+Tant que i < nombre
+	addition ← i+1
+	i ← i +1
+Fintantque
+Ecrire "la somme de tout les entiers précédant le nombre vaut "+ addition
+Fin
+
+Exercice 5.6 :
+
+Variables multiplication,nombre, i en Entiers
+Début
+i ← 1
+Ecrire "Saisissez un nombre entier"
+lire nombre
+Tant que i <= nombre
+	multiple ← i*(i+1)
+	i ← i +1
+Fintantque
+Ecrire "la factorielle du nombre saisi vaut "+ multiple
+Fin
+
+Exercice 5.7 :
+
+Variable nombre, stock, i en Entiers
+Début
+i ← 1
+stock ← 0
+Tant que i <= 20 Alors
+Ecrire "Entrez le nombre numéro "+i
+lire nombre
+Si nombre > stock Alors
+stock ← nombre
+finsi
+fintantque
+Ecrire "Le plus grand de ces nombres est : "+ stock
+Fin
+
+Variable nombre, stock, i, position en Entiers
+Début
+i ← 1
+stock ← 0
+Tant que i <= 20 Alors
+Ecrire "Entrez le nombre numéro "+i
+lire nombre
+Si nombre > stock Alors
+stock ← nombre
+position ← i
+finsi
+i ← i+1
+fintantque
+Ecrire "Le plus grand de ces nombres est : "+ stock + " C'était le nombre numéro "+ position
+Fin
+
+Exercice 5.8 :
+
+Variable nombre, stock, i, stop position en Entiers
+Début
+i ← 1
+stop ← 1
+stock ← 0
+Tant que stop != 0 Alors
+Ecrire "Entrez le nombre numéro "+i
+lire nombre
+Si nombre > stock Alors
+stock ← nombre
+position ← i
+finsi
+i ← i+1
+Ecrire "Si vous voulez arrêter la saisie des nombre tapez 0"
+Lire stop
+fintantque
+Ecrire "Le plus grand de ces nombres est : "+ stock + " C'était le nombre numéro "+ position
+Fin
+
+Exercice 5.9
+
