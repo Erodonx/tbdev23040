@@ -62,3 +62,126 @@ Sinon
 Finsi
 Fin
 
+
+Exercice 4.4 :
+
+Variable euro, nombre en Numérique
+Début
+Ecrire "Combien voulez vous faire de photocopies"
+lire nombre
+Si nombre > 0 ET <= 10 alors
+	euro ← nombre * 0.1
+	Ecrire "La facture est de " + euro " euros."
+   sinon
+   	Si nombre > 10 ET <= 30 Alors
+   		euro ← 1
+   		nombre ← nombre - 10
+   		euro ← euro + (nombre * 0.09)
+   		Ecrire "La facture est de " + euro " euros."
+   	Sinon
+   		euro ← 2.8
+   		nombre ← nombre - 30
+   		euro ← euro + (nombre*0.08)
+   		Ecrire "La facture est de " + euro " euros."
+   	Finsi
+Finsi
+Fin
+
+Exercice 4.5 : 
+
+Variable sexe en Booléen, age en Numérique
+Debut
+Ecrire "êtes vous un homme ?"
+Lire sexe
+Ecrire "Quel est votre âge ?"
+lire age
+Si sexe = vrai ET age > 20
+	Ecrire "Vous êtes imposable Mr"
+Sinon
+	Si sexe = faux ET age >= 18 ET age <= 35
+	Ecrire "Vous êtes imposable Mme"
+	Sinon
+	Ecrire "Vous n'êtes pas dans la catégorie des personnes imposables fier habitant du Zorglub"
+	Finsi
+Finsi
+Fin
+
+Exercice 4.6:
+
+Variables candidat1,candidat2,candidat3,candidat4 en Numériques
+Ecrire "quel est le score du 1er candidat" /*on suppose qu'ils saisissent le % en nombre normal*/
+Lire candidat1
+Ecrire "quel est le score du 2eme candidat"
+Lire candidat2
+Ecrire "quel est le score du 3eme candidat"
+Lire candidat3
+Ecrire "quel est le score du 4eme candidat"
+Lire candidat4
+Si candidat1 > 50 Et (candidat1 + candidat2 + candidat3 + candidat4) = 100 Alors
+	Ecrire "Le 1er candidat est élu dès le premier tour car il a obtenu + de 50% des voix"
+	Sinon
+		Si candidat1 > candidat2 ET candidat1 > candidat3 ET candidat1 > candidat4 ET (candidat1 + candidat2 + candidat3 + candidat4) = 100 Alors
+			Ecrire "Le 1er candidat est au second tour et est en ballotage favorable"
+		Sinon
+			Si candidat1 < 12.5 ET (candidat1 + candidat2 + candidat3 + candidat4) = 100 Alors
+				Ecrire "Le 1er candidat a été battu et ne participe pas au second tour
+			Sinon
+				Si candidat1 > 12.5 ET (candidat1 + candidat2 + candidat3 + candidat4) = 100
+					Ecrire "Le 1er candidat participe au second tour mais ne se trouve pas en ballotage favorable"
+				Sinon
+					Ecrire "La somme des suffrages ne fait pas 100, la saisie est incorrecte"
+				Finsi
+			finsi
+		finsi
+Finsi
+Fin
+
+Exercice 4.7 :
+Variables age, accident, contrat, permis en Entiers
+Début
+Ecrire "Depuis quand êtes vous membre de notre compagnie d'assurance (saisissez le nombre d'années)"
+lire contrat
+Si contrat >= 1 Alors
+	Ecrire "Vous pouvez bénéficier du tarif bleu car vous avez 1 an ou plus d'ancienneté chez nous"
+Sinon
+	Ecrire "Combien d'accident avez vous provoqués?"
+	lire accident
+	Si accident >= 3 Alors
+		Ecrire "Vous ne pouvez pas bénéficier de l'un de nos contrats"
+		Sinon
+		Ecrire "Quel age avez vous?"
+		lire age
+		Si age < 25 ET accident >=2 Alors
+			Ecrire "Vous ne pouvez pas bénéficier de l'un de nos contrats"
+		Sinon
+			Ecrire "Depuis combien d'années avez vous le permis ?"
+			Lire permis
+				Si age < 25 Alors
+			     		Si permis >= 2 ET accident > 1 OU permis < 2 ET accident >= 1 Alors
+			     			Ecrire "Vous ne pouvez pas bénéficier de l'un de nos contrats"
+			     		Sinon
+			     		     Si permis >= 2 ET accident = 1 OU permis < 2 ET accident = 0
+			     		     	Ecrire "Vous bénéficiez du tarif rouge"
+			     		     Sinon
+			     		     	Ecrire "Vous bénéficiez du tarif orange"
+			     		     Finsi
+			     		finsi
+			     	Sinon
+			     		Si permis >= 2 ET accident = 2 OU permis < 2 ET accident = 1 Alors
+			     			Ecrire "Vous bénéficiez du tarif rouge"
+			     		Sinon
+			     			Si permis >= 2 ET accident = 1 OU permis < 2 ET accident = 0 Alors
+			     				Ecrire "Vous bénéficiez du tarif orange"
+			     			Sinon
+			     				Ecrire "Vous bénéficiez du tarif vert"
+			     			Finsi
+			     			Si permis < 2 ET accident > 1 
+			     				Ecrire "Vous ne pouvez pas bénéficier de l'un de nos contrats"
+			     			Finsi
+			     		Finsi
+			     	Finsi
+		Finsi
+Finsi
+Fin
+
+
