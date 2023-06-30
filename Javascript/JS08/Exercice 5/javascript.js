@@ -1,29 +1,43 @@
 var tableau=[];
 var mot=window.prompt("Saisissez un mot");
 var nombre=0;
+var mot1;
 var mot2;
+var mot3;
 var stock;
 
 while (isNaN(mot)==false)
 {
     mot=window.prompt("Saisir a nouveau le mot");
-}
-for (var i=0; i< (mot.length); i++) {
-    //console.log(mot.length);   
+}   
     a=mot.indexOf('a','e','i','o','u','y');
+    console.log(a);
     if (a!=-1){
-            mot=mot.substring(a,(mot.length-1))
+            while ((mot.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z'))!=-1){
+
+            mot1=mot.substring(a,(mot.length))
             //aobab
-            a=mot.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z');
-            if (a!=-1){
-                mot2=mot.substring(0,(a-1));
+            console.log(mot1);
+            a=mot1.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z');
+            console.log(a);
+            if ((a!=-1) && (a!=mot1.length)){
+                mot2=mot1.substring(0,(a));
                 //ao
+                console.log(mot2);
+                mot3=mot1.substring((a),mot.length);
+                console.log(mot3);
+                //ab
+                mot1=mot2+mot3;
+                console.log(mot1);
+                mot=mot1;
+            }
+            if (a==(mot1.length)){
+                mot=mot1.substring(0,(mot1.length-1))
+
             }
 
-
+            }
     }
-
-}
     
     
     
