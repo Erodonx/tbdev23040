@@ -1,10 +1,41 @@
 var tableau=[];
-var chaine=window.prompt("Saisissez un mot");
+var mot=window.prompt("Saisissez un mot");
+var nombre=0;
+var mot2='bab';
+var stock;
 
 while (isNaN(mot)==false)
 {
-    mot=window.prompt("Saisir a nouveau le nombre");
+    mot=window.prompt("Saisir a nouveau le mot");
 }
+for (var i=0; i< (mot.length); i++) {
+    //console.log(mot.length);   
+    a=mot.indexOf('a','e','i','o','u','y');
+    while (a!=-1){
+        mot2=mot.substring(nombre,mot.indexOf('a','e','i','o','u','y'));
+        console.log(mot2);
+        console.log(a);
+        a=mot2.indexOf('a','e','i','o','u','y');
+        if (a ==-1)
+        {
+         mot2=stock;
+         a=1;
+        }
+        else{
+            stock=mot2;
+        }
+            
+    }
+
+
+//console.log(nombre);
+}
+// J'AI COMPRIS.
+    /*console.log(mot.substring(i,1));
+    console.log(mot);
+    console.log(mot);
+}
+console.log("le nombre de voyelles est "+ nombre);
 /*var index=0;
 var somme=0;
 var moyenne;*/
