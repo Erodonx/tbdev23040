@@ -1,7 +1,7 @@
 var tableau=[];
 var mot=window.prompt("Saisissez un mot");
 var nombre=0;
-var mot2='bab';
+var mot2;
 var stock;
 
 while (isNaN(mot)==false)
@@ -11,7 +11,23 @@ while (isNaN(mot)==false)
 for (var i=0; i< (mot.length); i++) {
     //console.log(mot.length);   
     a=mot.indexOf('a','e','i','o','u','y');
-    while (a!=-1){
+    if (a!=-1){
+            mot=mot.substring(a,(mot.length-1))
+            //aobab
+            a=mot.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z');
+            if (a!=-1){
+                mot2=mot.substring(0,(a-1));
+                //ao
+            }
+
+
+    }
+
+}
+    
+    
+    
+    /*while (a!=-1){
         mot2=mot.substring(nombre,mot.indexOf('a','e','i','o','u','y'));
         console.log(mot2);
         console.log(a);
