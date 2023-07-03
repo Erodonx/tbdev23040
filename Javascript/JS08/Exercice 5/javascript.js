@@ -1,20 +1,80 @@
-var tableau=[];
-var mot=window.prompt("Saisissez un mot");
-var nombre=0;
+var tab = ['a','e','i','o','u','y','A','E','I','O','U','Y'];
+var tabCoquin = ['1','2','3','4','5','6','7','8','9','0'];
+var chiffre;
+var voyelle= 0;
+var mot=/^[a-zA-Z]/;
 var mot1;
 var mot2;
-var mot3;
-var stock;
-
-while (isNaN(mot)==false)
+do 
 {
     mot=window.prompt("Saisir a nouveau le mot");
-}   
-    a=mot.indexOf('a','e','i','o','u','y');
-    console.log(a);
-    if (a!=-1){
-            while ((mot.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z'))!=-1){
+    chiffre=false;
+     for (var j in tabCoquin)
+        {
+          if (mot.indexOf(tabCoquin[j])!=-1)
+          {
+            chiffre=true;
+          }
+        }
 
+    if ((isNaN(mot)==false)||chiffre==true) {
+        window.alert('UN MOT J\'AI DIT')
+    }
+} while (isNaN(mot)==false||chiffre==true)
+window.alert(mot.length);
+for (i=0; i <= mot.length;i++) {
+    
+    for (var j in tab)
+        {
+            if ((mot.indexOf(tab[j]))!=-1)
+            {
+                voyelle=+voyelle+1;
+                console.log(voyelle);
+                console.log(tab[j]);
+                console.log(mot.indexOf(tab[j]));
+                if ((mot.indexOf(tab[j]))!=0 && (mot.indexOf(tab[j])!=mot.length))
+                {
+                  mot1=mot.substring((mot.indexOf(tab[j])+1),(mot.length));
+                  console.log(mot1);
+                  mot2=mot.substring(0,(mot.indexOf(tab[j])));
+                  console.log(mot2);
+                  mot=mot2+mot1;
+                  console.log(mot);
+                }
+                else if((mot.indexOf(tab[j]))==0)
+                {
+                 mot=mot.substring(1,(mot.length));
+                 console.log(mot);
+                }
+                else if((mot.indexOf(tab[j]))==mot.length && mot.indexOf(tab[j])!=0)
+                {
+                    mot=mot.substring(0,(mot.length));
+                    console.log(mot);
+                }
+
+            }
+        }
+
+}
+
+console.log(voyelle);
+window.alert('le nombre de voyelles est de '+voyelle+ ' le nombre de consonnes est de '+ mot.length);
+
+
+
+/*var mot1;
+var mot2;
+var mot3;
+
+
+    a=mot.indexOf('a','e','i','o','u','y');
+    console.log("ici "+a);
+
+    if (a!=-1){
+            console.log(mot.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z'));
+            while ((mot.indexOf('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','z'))!=-1){
+            console.log(a);
+            a=mot.indexOf('a','e','i','o','u','y');
             mot1=mot.substring(a,(mot.length))
             //aobab
             console.log(mot1);
@@ -24,15 +84,17 @@ while (isNaN(mot)==false)
                 mot2=mot1.substring(0,(a));
                 //ao
                 console.log(mot2);
-                mot3=mot1.substring((a),mot.length);
+                mot3=mot1.substring((a+1),mot.length);
                 console.log(mot3);
                 //ab
                 mot1=mot2+mot3;
                 console.log(mot1);
                 mot=mot1;
+                console.log(mot);
             }
             if (a==(mot1.length)){
-                mot=mot1.substring(0,(mot1.length-1))
+                mot=mot1.substring(0,(mot1.length-1));
+                console.log("condition2");
 
             }
 
