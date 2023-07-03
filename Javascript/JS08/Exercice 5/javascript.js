@@ -1,8 +1,8 @@
 var tab = ['a','e','i','o','u','y','A','E','I','O','U','Y'];
-var tabCoquin = ['1','2','3','4','5','6','7','8','9','0'];
+var tabCoquin = ['1','2','3','4','5','6','7','8','9','0','@','$','%','*','µ','!','§','/',':',';','.',',','?','£','#','(','-','|','\\','ç','°','[',']','+','=','}','{'];
 var chiffre;
 var voyelle= 0;
-var mot=/^[a-zA-Z]/;
+var mot;
 var mot1;
 var mot2;
 do 
@@ -14,6 +14,7 @@ do
           if (mot.indexOf(tabCoquin[j])!=-1)
           {
             chiffre=true;
+            break;
           }
         }
 
