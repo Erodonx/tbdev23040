@@ -7,9 +7,11 @@ function cubeProduit (a,b)
 
 }
 function afficheImg(imagelien){
-    var imagej = document.createElement("img");
+    const element = document.getElementById('papillonuwu');
+    element.src = imagelien;
+    /*var imagej = document.createElement("img");
     imagej.src=imagelien;
-    document.body.appendChild(imagej);
+    document.body.appendChild(imagej);*/
 }
 do{
 x=window.prompt('Saisissez un nombre');
@@ -29,12 +31,10 @@ if (isNaN(y)==true){
 
 res=cubeProduit(x,y);
 
+afficheImg('https://ncode.amorce.org/ressources/Pool/TB_DEV/WEB_Javascript_BASES/images/papillon.jpg');
 var montexte= "Le cube vaut " + cube +"\n Le produit de  "+ x + " x " + y + " est égal à "+ res;
 console.log(montexte);
 document.getElementById("zizou").innerHTML= montexte;
 
 console.log(res);
-
-afficheImg('https://img.freepik.com/photos-premium/pomme-pourrie-moisissure-fond-blanc_280340-1428.jpg');
-afficheImg('/Evaluation/CSS/JARDITOU/assets/img/jarditou_logo.jpg');
 //ZERGUD

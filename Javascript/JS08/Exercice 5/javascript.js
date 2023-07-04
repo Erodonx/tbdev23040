@@ -7,7 +7,7 @@ var mot1;
 var mot2;
 do 
 {
-    mot=window.prompt("Saisir a nouveau le mot");
+    mot=window.prompt("Saisir le mot");
     chiffre=false;
      for (var j in tabCoquin)
         {
