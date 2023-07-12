@@ -1,4 +1,4 @@
-var nombreMagique=Math.random()* (11 - 1) + 1;
+var nombreMagique=Math.random()* (101 - 1) + 1;
 var joueur = new Array();
 var j;
 nombreMagique=Math.round(nombreMagique);
@@ -41,14 +41,16 @@ function verif(){
     val=+val;
     if (val<nombreMagique)
     {
-        test.innerHTML+=('<br> '+ ' Le ' + i + ' chiffre saisi vaut ' + val + ' il est plus petit que le nombre magique. <br>');
+        test.innerHTML+=('<br> '+ ' Le ' + i + ' chiffre saisi vaut ' + val + ' il est plus petit que le nombre magique. [' +(val+1) + ' ; ?] <br>');
     }else if (val>nombreMagique){
-        test.innerHTML+=('<br> '+ ' Le ' + i + ' chiffre saisi vaut ' + val + ' il est plus grand que le nombre magique. <br>')
+        test.innerHTML+=('<br> '+ ' Le ' + i + ' chiffre saisi vaut ' + val + ' il est plus grand que le nombre magique. [?  ; ' + (val-1)+'] <br>');
     }else{
         test.innerHTML+='<br> BRAVO à ' + joueur[k];
         scoreJ[k]+=(+1);
         nbreManche+=(+1);
         window.alert('bravo car votre nombre ' + val + ' est égal au nombre magique: ' + nombreMagique);
+        nombreMagique=Math.random()* (101- 1) + 1;
+        nombreMagique=Math.round(nombreMagique);
         if(nbreManche==nbreMancheTot){
             test.innerHTML+='<br> Partie terminée';
         }
@@ -58,6 +60,16 @@ function verif(){
     }else{
         k=0;
     }
-    tourJoueur(k);
+    if (nbreManche!=nbreMancheTot){
+          tourJoueur(k);
+    }
+    if (nbreManche==nbreMancheTot)
+    {
+        test.innerHTML+='<h1> Tableau des scores </h1> <br>';
+        for(n=0; n<scoreJ.length;n++)
+        {
+            test.innerHTML+=joueur[n]+ ' : ' + scoreJ[n] +'<br>';
+        }
+    }
     console.log(scoreJ);
 }
