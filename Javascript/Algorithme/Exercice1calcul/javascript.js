@@ -12,7 +12,7 @@ function stockageJ(a)
     }else if (a >= 20 && a <= 40)
     {
         moyen.push(age);
-    }else if (a > 40)
+    }else
     {
         vieu.push(age);
         if (a == 100)

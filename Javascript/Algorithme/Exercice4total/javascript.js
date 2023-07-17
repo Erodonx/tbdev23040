@@ -13,7 +13,7 @@ function calcul(pu,qtecom)
     {
         remise = 0.9;
     }
-    totrem = qtecom * pu * remise;
+    totrem = (qtecom * pu * remise);
     if (totrem > 500)
     {
         port = 0;
@@ -24,10 +24,10 @@ function calcul(pu,qtecom)
             port = 6;
         }
     }
-    tot = totrem + port;
+    tot = (totrem + port).toFixed(2);
     return tot;
 }
 PU=window.prompt('Saisir le prix unitaire');
 QTECOM=window.prompt('Saisir la quantité commandée');
 total=calcul(PU,QTECOM);
-console.log(total);
+window.alert('le prix total est de : '+total);
