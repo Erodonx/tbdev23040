@@ -15,6 +15,10 @@ function penducache(pdumot){
 function verif() {
     let btn=document.getElementById('textBox1');
     let val=btn.value;
+      if (filtre.test(val)==false){
+        window.alert('il faut saisir une lettre. recommencez.');
+        btn.value='';
+    }else{
     if (memoiresaisie.indexOf(val)==-1)
     {
     memoiresaisie+=val;
@@ -24,10 +28,6 @@ function verif() {
     }
     if (essai<6){
     
-    if (filtre.test(val)==false){
-        window.alert('il faut saisir une lettre. recommencez.');
-        btn.value='';
-    }else{
         for (i=0;i<motpendu.length;i++)
         {
             if (motpendu.indexOf(val)!=-1){
@@ -78,13 +78,13 @@ if (penduaffichage.indexOf('_')==-1)
     document.getElementById('textBox1').style.display="none";
     document.getElementById('textbox').innerHTML+='<br> VOUS AVEZ PERDU !';   
 }
-}else if (memoiresaisie.indexOf(val)!=-1)
+else if (memoiresaisie.indexOf(val)!=-1)
 {
  window.alert('Vous avez déjà saisi cette lettre \nRécapitulatif des saisies : '+memoiresaisie);
 }
 
 }
-
+}
 var penduaffichage='';
 for (i=0; i<motpendu.length;i++)
 {
