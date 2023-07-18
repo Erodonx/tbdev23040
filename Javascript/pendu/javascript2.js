@@ -2,9 +2,6 @@ var filtre = new RegExp("^[a-z]{1}$");
 var memoire='';
 var memoiresaisie='';
 var essai=0;
-
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
 var mot1,mot2,pendu1,pendu2;
 var motpendu=window.prompt('Saisir le mot');
 function penducache(pdumot){
@@ -12,105 +9,8 @@ function penducache(pdumot){
  textbox.innerHTML+='<br>';
  for (i=0;i<pdumot.length;i++)
  {
-    if (pdumot[i]!=' ')
-    {
     textbox.innerHTML+=pdumot[i]+' ';
-    }else
-    {
-        textbox.innerHTML+='&nbsp'+pdumot[i]+'&nbsp';
-    }
  }
-}
-function draw(){
-    if(essai==1)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(250,350,300,5);
-    //base 1
-    }
-    if(essai==2)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(500,50,5,300);
-    //poteau 2
-    }
-    if(essai==3)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(250,50,300,5);
-    //barre du desuss 3
-    }
-    if (essai==4)
-    {
-    var x=470;
-    var y=51;
-    ctx.fillStyle= "black";
-    do
-    {
-    ctx.fillRect(x,y,1,5);
-    x++;
-    y++;
-    }while ((x<500)&&(y<81))
-    //barre diagonale
-    }
-    if(essai==5)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(350,50,5,90);
-    //fil tête
-    }
-    if (essai==6)
-    {
-    ctx.fillStyle = "black";
-    ctx.beginPath;
-    ctx.arc(352,125,25,0, Math.PI * 2, false);
-    ctx.fill();
-    //tete
-    }
-    if(essai==7)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(350,125,5,120);
-    //tronc
-    }
-    if(essai==8)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(290,175,60,5);
-    //bras gauche
-    }
-    if(essai==9)
-    {
-    ctx.fillStyle= "black";
-    ctx.fillRect(350,175,60,5);
-    //bras droit
-    }
-    if(essai==10)
-    {
-    var x=352;
-    var y=241;
-    ctx.fillStyle= "black";
-    do
-    {
-    ctx.fillRect(x,y,1,5);
-    x--;
-    y++;
-    }while ((x>322)&&(y<271))
-    //jambe gauche
-    }
-    if(essai==11)
-    {
-    var x=352;
-    var y=241;
-    ctx.fillStyle= "black";
-    do
-    {
-    ctx.fillRect(x,y,1,5);
-    x++;
-    y++;
-    }while ((x<382)&&(y<271))
-    //jambe droite
-    }
 }
 function verif() {
     let btn=document.getElementById('textBox1');
@@ -125,10 +25,8 @@ function verif() {
     if (motpendu.indexOf(val)==-1)
     {
          essai++;
-         draw();
     }
-    if (essai<11){
-
+    if (essai<10){
     
         for (i=0;i<motpendu.length;i++)
         {
@@ -162,10 +60,10 @@ function verif() {
         }
         }
         penducache(penduaffichage);
-        document.getElementById('textbox').innerHTML+= '| Il vous reste ' + (11-essai) + ' tentatives.';
+        document.getElementById('textbox').innerHTML+= '| Il vous reste ' + (10-essai) + ' tentatives.';
 
 
-    }else if(essai==11)
+    }else if(essai==10)
 {
  document.getElementById('button1').style.display="none";
     document.getElementById('textBox1').style.display="none";
@@ -191,7 +89,7 @@ var penduaffichage='';
 for (i=0; i<motpendu.length;i++)
 {
     console.log(motpendu[i]);
-    if (motpendu[i]!='\''&&motpendu[i]!='-'&&motpendu[i]!=' '){
+    if (motpendu[i]!='\''&&motpendu[i]!='-'&&motpendu[i]!=" "){
         penduaffichage+='_';
     }else
     {
@@ -203,12 +101,8 @@ for (i=0; i<motpendu.length;i++)
         }else if (motpendu[i]=='-')
         {
             penduaffichage+='-';
-            console.log(penduaffichage);
+               console.log(penduaffichage);
          console.log(i);
-        }else if (motpendu[i]==" ")
-        {
-            penduaffichage+=" ";
-            console.log(penduaffichage);
         }
     }
 }
