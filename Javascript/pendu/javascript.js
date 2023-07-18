@@ -7,6 +7,11 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 var mot1,mot2,pendu1,pendu2;
 var motpendu=window.prompt('Saisir le mot');
+function afficheLettre(memory)
+{
+    let textbox1=document.getElementById('textbox1');
+    textbox1.innerHTML=memory;
+}
 function penducache(pdumot){
  let textbox=document.getElementById('textbox');
  textbox.innerHTML+='<br>';
@@ -128,6 +133,7 @@ function verif() {
          draw();
     }
     if (essai<11){
+        afficheLettre(memoiresaisie);
 
     
         for (i=0;i<motpendu.length;i++)
@@ -163,6 +169,7 @@ function verif() {
         }
         penducache(penduaffichage);
         document.getElementById('textbox').innerHTML+= '| Il vous reste ' + (11-essai) + ' tentatives.';
+        btn.value='';
 
 
     }else if(essai==11)
