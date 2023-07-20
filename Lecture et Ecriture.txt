@@ -1,0 +1,29 @@
+Exercice 2.1:
+d'abord 231 puis 462 (231*2).
+
+Exercice 2.2
+
+Variable val en Numérique
+Début
+Ecrire "Saisissez un nombre"
+Lire val
+val ← val*val
+Ecrire "Le carré de votre nombre vaut ", val
+Fin
+
+Exercice 2.3:
+Variables HT, nombre, TVA, total en Numériques
+Début
+Ecrire "Saisissez le prix HT de votre article"
+Lire HT
+Ecrire "Quel est le taux de TVA"
+Lire TVA
+Ecrire "Combien d'articles de ce type avez vous pris ?"
+Lire nombre
+Total ← HT*nombre*TVA
+Ecrire Total
+Fin
+
+Exercice 2.4 :
+
+Vraiment faire ça?
