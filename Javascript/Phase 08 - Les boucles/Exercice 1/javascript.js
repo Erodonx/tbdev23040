@@ -23,6 +23,7 @@ for (var i in tableau)
 {
  console.log(tableau[i]);
 }
-
+console.log(tableau);
+console.log('nombre de prénom '+ tableau.length);
 
 

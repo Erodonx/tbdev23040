@@ -13,7 +13,7 @@ for (var i =1; i <= nombre1 ; i++)
 {
  resultat = i*nombre2;
  console.log(i + " x " +nombre2 + " = " + resultat);
-
+ document.write(i + " x " +nombre2 + " = " + resultat+'<br>');
 }
 
 
