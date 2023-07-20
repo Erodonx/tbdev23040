@@ -1,6 +1,7 @@
 var nombreMagique=Math.random()* (101 - 1) + 1;
 var joueur = new Array();
 var j;
+var element = document.getElementById('button1');
 var stockbas=0;
 var stockhaut=100
 nombreMagique=Math.round(nombreMagique);
@@ -18,6 +19,7 @@ function tourJoueur(a){
     document.getElementById('textBox1').value='';
     window.alert('c\'est au tour du joueur : ' + joueur[a]);
 }
+window.alert('Bienvenu au jeu du nombre magique, Veuillez saisir le nombre de joueurs ainsi que le nombre de manche !\nAmusez vous bien !');
 do{
 var a=window.prompt('Saisissez le nombre de joueurs');
 var nbreMancheTot=window.prompt('Saisissez le nombre de manche');
@@ -41,7 +43,7 @@ console.log(scoreJ);
 k=0;
 window.alert('la partie va bientôt commencer...');
 tourJoueur(k);
-function verif(){
+element.addEventListener("click", function(){
     let btn=document.getElementById('textBox1');
     let test=document.getElementById('tests');
     let val = btn.value;
@@ -99,4 +101,4 @@ function verif(){
         window.alert('SAISIR UN NOMBRE PUTAIN');
         tourJoueur(k);
     }
-}
+});
