@@ -11,4 +11,3 @@ while (isNaN(prenom)==false)
     prenom=window.prompt("Saisissez votre prénom");
 }
 window.alert("Votre nom est " + nom + " Votre prénom est " + prenom);
-exit;
