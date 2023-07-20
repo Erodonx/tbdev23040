@@ -1,4 +1,3 @@
-var filtresoc = new RegExp("^[A-Za-z0-9]+$");
 var filtre = new RegExp("^[A-Za-z]+$");
 var filtrecp = new RegExp("^[0-9]{5}$");
 var filtremail= new RegExp("^[A-Za-z0-9.-]+@[A-Za-z0-9.-]{2,}.[A-Za-z]{2,4}$");
