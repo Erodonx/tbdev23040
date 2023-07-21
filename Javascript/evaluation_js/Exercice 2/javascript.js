@@ -13,9 +13,7 @@ function TableMultiplication(nombre){
 }
 document.write('<h1>TABLE DE MULTIPLICATION</h1>');
 do{
-    nombre=window.prompt('Saisissez un nombre compris entre 1 et 9');
-}while (isNaN(nombre)==true || (nombre<1) || (nombre>9))
+    nombre=window.prompt('Saisissez un nombre compris entre 1 et 10');
+}while (isNaN(nombre)==true || (nombre<1) || (nombre>10))
 
 TableMultiplication(nombre);
-
-Document.clear();

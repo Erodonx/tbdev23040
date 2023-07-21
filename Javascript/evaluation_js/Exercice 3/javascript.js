@@ -12,9 +12,6 @@ function rechercheTab(p)
         }else{
             tab[(tab.length-1)]="";
         }
-        /*tab[tab.indexOf(p)]=tab[tab.length];
-        temp = tab[tab.length];
-        tab[tab.length]="";*/
         }
     }else{
         window.alert('Erreur, prénom saisi n\'est pas dans le tableau');

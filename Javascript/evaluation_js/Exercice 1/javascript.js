@@ -4,7 +4,7 @@ var moyen = new Array();
 var vieu = new Array();
 var fin = false;
 
-function stockageJ(a)
+function stockage(a)
 {
     if (a<20)
     {
@@ -46,14 +46,15 @@ function moyenne (j,m,v)
     moyenne = (sumj + summ + sumv) / (j.length + m.length + v.length);
     return moyenne;
 }
+window.alert('Veuillez saisir l\'âge des différentes personnes.Pour arrêter la saisie veuillez saisir le nombre 100 (centenaire compté)');
 
 do {
     age = window.prompt('Saisir l\'age de la personne');
-    if (age<=0 || isNaN(age)==true || age>120)
+    if (age<0 || isNaN(age)==true || age>120)
     {
         window.alert('l\'age saisi n\'est pas une valeur correcte... Veuillez recommencer.');
     }else{
-        stockageJ(age);
+        stockage(age);
     }
 }while (fin==false)
 moy=moyenne(jeune,moyen,vieu);
