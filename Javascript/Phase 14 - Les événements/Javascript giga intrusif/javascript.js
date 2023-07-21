@@ -96,7 +96,7 @@ function verif(){
     }
     console.log(scoreJ);
     }else{
-        window.alert('SAISIR UN NOMBRE PUTAIN');
+        window.alert('SAISIR UN NOMBRE');
         tourJoueur(k);
     }
 }

@@ -3,6 +3,7 @@ var filtrecp = new RegExp("^[0-9]{5}$");
 var filtremail= new RegExp("^[A-Za-z0-9.-]+@[A-Za-z0-9.-]{2,}.[A-Za-z]{2,4}$");
 
 
+//document.querySelector('#form1').onsubmit = function(){
 
 function checkForm (f) {
     

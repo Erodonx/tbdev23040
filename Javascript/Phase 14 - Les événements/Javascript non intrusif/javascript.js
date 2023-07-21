@@ -98,7 +98,7 @@ element.addEventListener("click", function(){
     }
     console.log(scoreJ);
     }else{
-        window.alert('SAISIR UN NOMBRE PUTAIN');
+        window.alert('SAISIR UN NOMBRE');
         tourJoueur(k);
     }
 });
