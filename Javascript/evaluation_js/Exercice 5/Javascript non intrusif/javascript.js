@@ -15,6 +15,7 @@ form.addEventListener('submit', (e) => {
     }
     if (filtre.test(form.elements['nom'].value)==false)
     {
+        
         window.alert('Vous avez mal saisi le '+form.elements['nom'].name);
         e.preventDefault();
         return;

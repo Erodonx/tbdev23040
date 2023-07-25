@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="jarditou_js/style.css">
     <title>Contact</title>
 </head>
-<body>    <script src="javascript.js" defer></script>
-
+<body>
+  <script src="javascript.js" defer></script>
     <header>
         <div class="parent" id="parent1">
             <div class="box">
@@ -35,27 +35,36 @@
         <fieldset>
             <legend>Vos coordonnées</legend>
             <label for="nom">Votre Nom* :</label><input type="text" name="nom" id="nom"> <br>
+            <span id="defaultname"></span>
             <label for="prenom">Votre Prénom* :</label><input type="text" name="prenom" id="prenom"> <br> <br>
-            Sexe *:
+            <span id="defaultprenom"></span>
+            <label for="sexe">Sexe *:</label>
+            <span id="defaultsexe"></span>
                 <input type="radio"  id="feminin" name="sexe" value="Feminin">
                 <label for="feminin">Féminin</label>
                 <input type="radio" id="masculin" name="sexe" value="Masculin">
                 <label for="masculin">Masculin</label><br><br>
             <label for="date">Date de naissance* :</label>
+            <span id="defaultdate"></span>
                 <input type="date" name="ddn" id="date"> <br>
             <label for="codepostal">Code postal* :</label>
+            <span id="defaultcode"></span>
                 <input type="text" id="codepostal"> <br>
             <label for="adresse">Adresse :</label>
+            <span id="defaultadresse"></span>
                 <input type="text" id="adresse"> <br>
             <label for="ville">Ville :</label>
+            <span id="defaultville"></span>
                 <input type="text" id="ville"> <br>
             <label for="email">Email* :</label>
+            <span id="defaultmail"></span>
                 <input type="text" id="email" placeholder="dave.loper@afpa.fr"> <br>  
         </fieldset>
         
         <fieldset>
         <legend>Votre demande</legend>
         <label for="sujet">Sujet* :</label>
+        <span id="defaultsujet"></span>
             <select id="sujet">
                 <option value="">Veuillez selectionner un sujet</option>
                 <option value="commandes">Mes commandes</option>
@@ -65,10 +74,12 @@
 
             </select> <br>
         <label for="question">Votre question* :</label>
+        <span id="defaultquestion"></span>
             <textarea id="question"></textarea>
         </fieldset>
 
-        <input type="checkbox" name="accepter" value="accepter" id="accepter">* J'accepte le traitement informatique de ce formulaire <br>
+        <input type="checkbox" name="accepter" value="accepter" id="accepter"><label for="accepter">* J'accepte le traitement informatique de ce formulaire</label> <br>
+        <span id="defaultaccepter"></span>
         <input type="submit" value="Envoyer" id="idSubForm1" name="subForm1">
         <input type="reset" value="Annuler">
     </fieldset>
@@ -83,6 +94,6 @@
             </ul>
         </div>
     </footer>
-
+  
     </body>
 </html>
