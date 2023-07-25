@@ -6,7 +6,7 @@ let defaultname=document.getElementById('defaultname');
 let defaultprenom=document.getElementById('defaultprenom');
 let defaultsexe=document.getElementById('defaultsexe');
 let defaultdate=document.getElementById('defaultdate');
-let defaultcode=document.getElementById('defaultcode');
+let defaultpostal=document.getElementById('defaultpostal');
 let defaultmail=document.getElementById('defaultmail');
 let defaultsujet=document.getElementById('defaultsujet');
 let defaultquestion=document.getElementById('defaultquestion');
@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
     defaultprenom.innerHTML="";
     defaultsexe.innerHTML="";
     defaultdate.innerHTML="";
-    defaultcode="";
+    defaultpostal.innerHTML="";
     defaultmail.innerHTML="";
     defaultsujet.innerHTML="";
     defaultquestion.innerHTML="";
@@ -58,11 +58,11 @@ form.addEventListener('submit', (e) => {
     }
     if (form.elements['codepostal'].value=='')
     {
-        defaultcode.innerHTML = "* veuillez saisir le code postal <br>";
+        defaultpostal.innerHTML = "* veuillez saisir le code postal <br>";
         e.preventDefault();
     } else if (filtrecp.test(form.elements['codepostal'].value)==false)
     {
-        defaultcode.innerHTML = "* veuillez saisir correctement le code postal  <br>";
+        defaultpostal.innerHTML = "* veuillez saisir correctement le code postal  <br>";
         e.preventDefault();
     }
     if(form.elements['email'].value=='')

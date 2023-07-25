@@ -27,9 +27,11 @@ if (isNaN(y)==true){
 } while (isNaN(y)==true)
 
 res=produit(x,y);
-
+var carre=produit(x,x);
 console.log(res);
+afficheImg('papillon.jpg');
+document.write ('<br>le carré vaut '+carre);
+document.write ('<br>le produit vaut '+res);
 
-afficheImg('https://img.freepik.com/photos-premium/pomme-pourrie-moisissure-fond-blanc_280340-1428.jpg');
-afficheImg('/Evaluation/CSS/JARDITOU/assets/img/jarditou_logo.jpg');
+
 //ZERGUD

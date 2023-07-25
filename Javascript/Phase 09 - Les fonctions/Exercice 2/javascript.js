@@ -5,7 +5,7 @@ function strtokSp(str1, str2, n){
 
 
 function strtok(str1, str2, n){
-    var strtemp;
+    let strtemp;
     console.log(str1);
     for(i=0 ; i<n-1 ; i++)
     {
@@ -26,7 +26,8 @@ function strtok(str1, str2, n){
 
 }
 var strTest="robert ;dupont ;amiens ;80000 ;initalD ;Pinata";
-var strRed=strtokSp(strTest, ';', 2);
+var strRed=strtokSp(strTest, ';', 5);
+var strBlue=strtok(strTest,';',3);
 console.log(strRed);
 window.alert('Vous avez extrait '+ strRed);
-
+window.alert('Vous avez extrait '+strBlue);
