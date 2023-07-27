@@ -6,4 +6,10 @@ while(isNaN(nombre)||(nombre<=1900)||(nombre>=annee)) {
     nombre=+nombre;
 }
 var age=annee-nombre;
-window.alert("Vous avez "+age +" ans");
+if (age>=18)
+{
+  window.alert("Vous avez "+age +" ans et vous êtes majeur");
+}
+else{
+    window.alert("Vous avez "+age +" ans et vous êtes mineur");
+}

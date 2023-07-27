@@ -1,4 +1,4 @@
-var tableau=[];
+/*var tableau=[];
 var nombre=window.prompt("Saisissez un nombre");
 while (isNaN(nombre)==true)
 {
@@ -18,7 +18,14 @@ for (var i in tableau)
  else{
  document.write(tableau[i]);  
  }
+}*/
+var nombre=window.prompt('Saisissez votre nombre');
+document.write('Les entiers inférieurs au nombre saisi sont : ');
+for (i=1; i<nombre;i++)
+{
+    document.write('<br>'+i);
 }
+
 
 
 

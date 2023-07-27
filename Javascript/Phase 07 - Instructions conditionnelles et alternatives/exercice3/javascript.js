@@ -16,9 +16,8 @@ var calcul=0;
 
 if (operateur=='+')
 {
- /*nombre1=+nombre1;
- nombre2=+nombre2;*/
- calcul=(+nombre1)+(+nombre2);
+
+ calcul=Number(nombre1)+Number(nombre2);
  window.alert(calcul);
 }
 else if (operateur=='-'){
@@ -30,6 +29,7 @@ else if (operateur=='*'){
     window.alert(calcul);
 }
 else if (operateur=='/'){
+    
     if ((nombre1==0) ||(nombre2==0)){
         window.alert('on ne peux pas diviser par 0 !');
     }
