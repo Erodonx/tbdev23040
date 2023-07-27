@@ -10,15 +10,18 @@
     <script src="javascript.js" defer></script>
     <h1>Vos coordonnées :</h1>
     <form id="form1" name="form1" method="post">
+    
     <p class="bordeau">* Ces zones sont obligatoires pour envoyer le formulaire</p>
-    <fieldset>
+    <div class="grandparent">
         <div class="parent">
         <div class="champ">
         <label for="societe">Société :</label>
         </div>
         <div class="box">
         <input type="text" name="societe" id="societe">
+        <span id="societeE"></span>
         </div>
+        
         <div class="asterisque"> <p class="bordeau">*</p> </div><br>
         </div>
         <div class="parent">
@@ -27,6 +30,7 @@
         </div>
         <div class="box">
         <input type="text" name="contacter" id="contacter">
+        <span id="contactE"></span>
         </div>
         <div class="asterisque"> <p class="bordeau">*</p> </div><br>
         </div>
@@ -44,9 +48,9 @@
         </div>
         <div class="box">
         <input type="text" name="code" id="code">
+        <span id="codeE"></span>
         </div>
         <div class="asterisque"> <p class="bordeau">*</p> </div><br>
-        </div>
         </div>
         <div class="parent">
         <div class="champ">
@@ -54,9 +58,9 @@
         </div>
         <div class="box">
         <input type="text" name="ville" id="ville">
+        <span id="villeE"></span>
         </div>
         <div class="asterisque"> <p class="bordeau">*</p> </div><br>
-        </div>
         </div>
         <div class="parent">
         <div class="champ">
@@ -64,9 +68,9 @@
         </div>
         <div class="box">
         <input type="text" name="mail" id="mail">
+        <span id="mailE"></span>
         </div>
         <div class="asterisque"> <p class="bordeau">*</p> </div><br>
-        </div>
         </div>
         <div class="parent">
         <div class="champ">
@@ -78,14 +82,14 @@
         </div>
         <div class="parent">
         <div class="champ">
-        <label for="environnement">Selectionnez l'environnement <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;technique du projet :</label>
+        <label for="environnement">Selectionnez l'environnement <br>technique du projet :</label>
         </div>
         <div class="box">
         <textarea id="environnementSup"></textarea>
         </div>
         </div>
         <div class="parent">
-        <div class="champ">
+        <div class="environnement">
         <select id="environnement">
             <option value="">Choisissez</option>
             <option value="Access">Access</option>
@@ -106,10 +110,9 @@
         </div>
         <div class="button">
         <input type="submit" value="Envoyer" id="idSubForm1" name="subForm1">
-        <input type="reset" value="Annuler">
+        <input type="reset" value="Effacer">
         </div>
-    </fieldset>
-
+    </div>
     </form>
 </body>
 </html>

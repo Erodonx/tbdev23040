@@ -3,68 +3,61 @@ var filtre = new RegExp("^[A-Za-z]+$");
 var filtrecp = new RegExp("^[0-9]{5}$");
 var filtremail= new RegExp("^[A-Za-z0-9.-]+@[A-Za-z0-9.-]{2,}.[A-Za-z]{2,4}$");
 var form=document.getElementById('form1');
+var societe=document.getElementById('societeE');
+var contact=document.getElementById('contactE');
+var code=document.getElementById('codeE');
+var ville=document.getElementById('villeE');
+var mail=document.getElementById('mailE');
 form.querySelector('#idSubForm1').onclick = function(e) {
+    societe.innerHTML='';
+    contact.innerHTML='';
+    code.innerHTML='';
+    ville.innerHTML='';
+    mail.innerHTML='';
     
     if (form.elements['societe'].value=='')
     {
-        window.alert('Veuillez remplir le champ de '+ form.elements['societe'].name + ' s\'il vous plaît');
+        societe.innerHTML='Veuillez renseigner la société.';
         e.preventDefault();
-        return;
-    }
-    if (filtresoc.test(form.elements['societe'].value)==false)
+    }else if (filtresoc.test(form.elements['societe'].value)==false)
     {
-        window.alert('Vous avez mal saisi le nom de votre société.');
+        societe.innerHTML='Vous avez mal rempli le champ société.';
         e.preventDefault();
-        return;
     }
     if (form.elements['contacter'].value=='')
     {
-        window.alert('Veuillez remplir le champ de la personne à contacter s\'il vous plaît');
+        contact.innerHTML='Veuillez renseigner la personne à contacter.';
         e.preventDefault();
-        return;
-    }
-    if (filtre.test(form.elements['contacter'].value)==false)
+    }else if (filtre.test(form.elements['contacter'].value)==false)
     {
-        window.alert('Veuillez saisir un prénom, pour définir la personne à contacter.');
+        contact.innerHTML='Vous avez mal rempli le champ de la personne à contacter.';
         e.preventDefault();
-        return;
     }
     if (form.elements['code'].value=='')
     {
-        window.alert('Vous devez remplir le code postal !');
+        code.innerHTML='Veuillez renseigner le code postal';
          e.preventDefault();
-         return;
-    }
-    if (filtrecp.test(form.elements['code'].value)==false)
+    }else if (filtrecp.test(form.elements['code'].value)==false)
     {
-        window.alert('un code postal se compose de 5 chiffres.');
+        code.innerHTML='Le code postal n\'est pas valide.';
         e.preventDefault();
-        return;
     }
     if (form.elements['ville'].value=='')
     {
-        window.alert('Veuillez saisir le nom de la ville');
+        ville.innerHTML='Veuillez renseigner la ville.';
          e.preventDefault();
-         return;
-    }
-    if (filtre.test(form.elements['ville'].value)==false)
+    }else if (filtre.test(form.elements['ville'].value)==false)
     {
-        window.alert('Vous avez mal saisi le nom de la ville');
+        ville.innerHTML='Le nom de la ville n\'est pas valide.';
          e.preventDefault();
-         return;
     }
     if(form.elements['mail'].value=='')
     {
-        window.alert('L\'adresse mail est vide');
+        mail.innerHTML='Veuillez renseigner l\'adresse mail';
         e.preventDefault();
-        return;
-    }
-    if (filtremail.test(form.elements['mail'].value==false))
+    }else if (filtremail.test(form.elements['mail'].value)==false)
     {
-        window.alert('Vous avez mal saisi l\'adresse mail.');
+        mail.innerHTML='Vous avez mal saisi l\'adresse mail.';
         e.preventDefault();
-        return;
     }
 }
-
-/* */

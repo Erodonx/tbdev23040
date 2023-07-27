@@ -1,30 +1,49 @@
+.grandparent{
+   margin-left:150px;
+   margin-right:150px;
+}
+span{
+    color:red;
+}
 .parent{
 border:0px white solid;
-display : flex;
 height:100%;
-width: 100%;
+width:auto;
+display:flex;
 }
 .bordeau{
     color : darkred;
     font-weight: bold;
 }
 .champ{
-    text-indent:100px;
+    font-weight:bold;
+    justify-content: left;
     display:flex;
     margin: 25px;
     width:25%;
     height:100%;
 
 }
+.environnement{
+    margin:25px;
+    display:flex;
+    justify-content: left;
+    width:25%;
+    height:100%;
+
+}
 .box{
-        margin: 25px;
-    width:10%;
+    display:flex;
+    margin: 25px;
+    width:auto;
     height:100%;
 }
-.asterisque{
+.asterisque{ 
+ display:flex;
  width:25%;
  height:100%;
 }
 .button{
     display:flex;
+    justify-content: center;
 }
