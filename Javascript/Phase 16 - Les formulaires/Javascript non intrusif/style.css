@@ -1,0 +1,30 @@
+.parent{
+border:0px white solid;
+display : flex;
+height:100%;
+width: 100%;
+}
+.bordeau{
+    color : darkred;
+    font-weight: bold;
+}
+.champ{
+    text-indent:100px;
+    display:flex;
+    margin: 25px;
+    width:25%;
+    height:100%;
+
+}
+.box{
+        margin: 25px;
+    width:10%;
+    height:100%;
+}
+.asterisque{
+ width:25%;
+ height:100%;
+}
+.button{
+    display:flex;
+}
