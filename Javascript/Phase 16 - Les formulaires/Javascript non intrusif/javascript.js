@@ -18,7 +18,7 @@ form.querySelector('#idSubForm1').onclick = function(e) {
     if (form.elements['societe'].value=='')
     {
         societe.innerHTML='Veuillez renseigner la société.';
-        e.preventDefault();Œ    
+        e.preventDefault();
     }else if (filtresoc.test(form.elements['societe'].value)==false)
     {
         societe.innerHTML='Vous avez mal rempli le champ société.';
