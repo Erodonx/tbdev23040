@@ -4,3 +4,5 @@ VARIABLES PRENOM,NOM
 
 8/2 = 4
 5/2=2.5;
+
+vaut '='

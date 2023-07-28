@@ -59,7 +59,7 @@ element.addEventListener("click", function(){
         }
         test.innerHTML+=('<br> Le nombre saisi vaut ' + val + ' il est plus petit que le nombre magique. [' +stockbas + ' ; '+stockhaut+ '] <br>');
     }else if (val>nombreMagique){
-        if (stockhaut>(val+1))
+        if (stockhaut>(val-1))
         {
             stockhaut=(val-1);
         }
